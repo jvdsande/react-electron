@@ -1,0 +1,38 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <script>
+      var ipcRenderer = require("electron").ipcRenderer
+
+      function load(filetype, filename){
+          filetype = filetype || filename.split('.').pop()
+          if (filetype=="js"){ //if filename is an external JavaScript file
+              var fileref=document.createElement('script')
+              fileref.setAttribute("type","text/javascript")
+              fileref.setAttribute("src", "js/"+filename+"."+filetype)
+          }
+          else if (filetype=="react"){
+              var fileref=document.createElement('script')
+              fileref.setAttribute("type","text/javascript")
+              fileref.setAttribute("src", "react/"+filename+"."+filetype)
+          }
+          else if (filetype=="css"){ //if filename is an external CSS file
+              var fileref=document.createElement("link")
+              fileref.setAttribute("rel", "stylesheet")
+              fileref.setAttribute("type", "text/css")
+              fileref.setAttribute("href", "css/"+filename+"."+filetype)
+          }
+          if (typeof fileref!="undefined")
+              document.getElementsByTagName("head")[0].appendChild(fileref)
+      }
+
+      ipcRenderer.on("load-file", function(from,file) {
+        load(file[0], file[1])
+      })
+
+      ipcRenderer.send("ask-files")
+    </script>
+  </body>
+</html>

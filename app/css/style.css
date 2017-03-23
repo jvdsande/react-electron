@@ -1,0 +1,137 @@
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url("../resources/Roboto-Light.ttf") format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url("../resources/Roboto-Regular.ttf") format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url("../resources/Roboto-Medium.ttf") format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #ECEFF1;
+    text-align: justify;
+}
+
+#content {
+    box-sizing: border-box;
+    padding-bottom: 30%;
+    margin-top: 0;
+    height: calc(100% - 64px);
+    overflow: auto;
+    text-align: center;
+}
+
+
+#window-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 24px;
+  width: 134px;
+}
+#window-control-close {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 42px;
+  margin: 3px;
+  background: url('../resources/close.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+#window-control-close:hover {
+  background-color: #C12C18
+}
+#window-control-maximize {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 36px;
+  margin: 3px;
+  background: url('../resources/maximize.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+#window-control-minimize {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 36px;
+  margin: 3px;
+  background: url('../resources/minimize.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+#window-control-maximize:hover,#window-control-minimize:hover {
+  background-color: rgba(0,0,0,0.2)
+}
+
+
+
+
+
+
+.Manual {
+    display: inline-block;
+    width: auto;
+    max-width: 60%;
+    min-width: 575px;
+    text-align: justify;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+p + p {
+    margin-top: -13px;
+}
+
+ul p {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+code {
+    font-size: 105%;
+    font-weight: bold;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+
+.block {
+  display: block;
+}
+
+code.block {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,4 @@
+{
+    "ignore":["app/*", "nodemon.json", "package.json", ".babelrc"],
+    "ext":"*"
+}
